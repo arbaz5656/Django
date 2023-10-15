@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+
+	<style>
+	h1 {color: black;}
+	button {color:white;}
+    button {background-color:red}
+	form {color:  blue;}
+    body {background-color:skyblue; }
+
+	</style>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+	<h1 align="center">Registration form</h1>
+
+<table  border="6" align="center">
+<tr><td>First_NAME:<td><input type="text" name="first_name" placeholder="first_name" required></td></tr>
+<tr><td>Last_NAME:<td><input type="text" name="last_name" placeholder="last_name" required></td></tr>
+<tr><td>USERNAME:<td><input type="text" name="username" placeholder="Enter Username" required autocomplete="off"></td></tr>
+<tr><td>Email:<td><input type="email" name="email" placeholder="Enter Email" required></td></tr>
+<tr><td>Password:<td><input type="password" name="password" placeholder=" Enter the Password" required autocomplete="off"></td></tr>
+<tr><td>Confirm Password:<td><input type="password" name="confirmpassword" placeholder="Confirm password"></td></tr>
+          <tr><td align="center" colspan="2"> <button type="submit" name="reg_user">submit</button></td></tr>
+           <tr><td><p>Alredy a user?<a href="http://127.0.0.1:8000/login"><b>Log in</b></a></p></td></tr>
+</form>
+
+
+<div align="center">
+	{% for message in messages%}
+	<h3>{{message}}</h3>
+	{% endfor %}
+</div>
+</body>
+</html>

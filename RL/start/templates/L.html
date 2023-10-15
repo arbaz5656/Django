@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+
+	<style>
+		h1 {color: black;}
+	button {color:red;}
+	button{background-color: gray}
+	form {color:  blue;}
+body {background-color: skyblue; }
+
+	</style>
+</head>
+<body>
+	<FORM class="box" method="post">
+        {% csrf_token %}
+	<h1 align="center">Login form</h1>
+
+<table border="6" align="center">
+	<tr><td>USER NAME:<td><input type="text" name="username" placeholder="Enter your name" required></td></tr>
+<tr><td> password:<td><input type="password" name="password" placeholder="Password" required></td></tr>
+ <tr><td align="center" colspan="2"> <button type="submit" name="login_user">Log in</button></td></tr>
+  <tr><td><p>Not a user?<a href="http://127.0.0.1:8000/"><b>Register here</b></a></p></td></tr>
+
+</FORM>
+
+<div align="center">
+	{% for message in messages%}
+	<h3>{{message}}</h3>
+	{% endfor %}
+</div>
+
+</body>
+</html>
