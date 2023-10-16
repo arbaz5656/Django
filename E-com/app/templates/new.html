@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Javascript </title>
+</head>
+<body>
+<!-- DOM -->
+<!-- id -->
+<!-- <header id="header">
+	<h1 id="h1">Shaikh Arbaz</h1>
+	<p id="p">I am an Engineering Student.</p>
+	
+</header>
+
+ -->
+<h1 class="h1" id="h1">Hello</h1>
+Fname=<input type="text" name="fname" class="fname">
+Lname=<input type="text" name="lname" class="lname">
+<button type="Submit" onclick="clas()">Submit</button>
+
+<script type="text/javascript">
+
+// Varible in javascript
+	// const a=9;
+	// const b=1;
+	// let total=a+b;
+	// document.write(total);
+
+
+// DOM
+// id
+// let varible=document.getElementById('h1').innerHTML;
+// var a=document.getElementById('h1').textContent="hELLo";
+// // document.write(varible+"  Ahmed");
+// document.write('a');
+// document.getElementById('h1').style.color="red";
+// document.getElementById("p").style.color = "blue";
+// console.log(varible);
+
+// class
+// document.getElementsByTagName('h1').style.color='red';
+var tagElements = document.getElementsByTagName('h1');
+
+for (var i = 0; i < tagElements.length; i++) {
+    tagElements[i].style.background = 'red';
+}
+
+function clas() {
+	var name1=document.getElementsByClassName('fname')[0].value;
+	let name2=document.getElementsByClassName('lname')[0].value;
+	alert(name1+" "+name2);
+
+}
+
+</script>
+</body>
+</html>
